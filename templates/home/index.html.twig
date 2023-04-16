@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Drip-Car{% endblock %}
+
+{% block body %}
+<!-- Hero -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1 class="lg">Bienvenue chez Drip-Car</h1>
+            <p>tu trouveras ce dont tu as besoin</p>
+           <a href="{{ path('app_product_index') }}" class="btn btn-outline sm">Voir nos vehicules</a>
+
+        </div>
+    </div>
+    <!-- Categories -->
+    <section>
+        <div class="container">
+            <h1 class="md text-center my-2">Nos catégories</h1>
+            <div class="grid grid-3 text-center my-4">
+            {% for category in categories %}
+                <div class="category-card">
+                    <a class="md" href="{{ path('app_product_index') }}?category_id={{category.id}}">
+                        <img src="\images\{{category.image}}" />
+                        <div>
+                            {{category.name}}
+                        </div>
+                    </a>
+                </div>
+                
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

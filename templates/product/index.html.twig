@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+
+    <section>
+        <div class="container">
+            <h1 class="md text-center my-3">Nos vehicules</h1>
+            <div class="grid grid-4 text-center my-4">
+            {% for product in products %}
+                    <div class="produit-card my-3">
+                        <img src="/uploads/product/{{product.image}}" />
+                        <div class="produit-title">
+                            <a class="sm" href="/product/{{product.id}}">{{product.name}}</a>
+                        </div>
+                    </div>
+            {% else %}
+                <h3>Aucun vehicule trouvé</h3>
+            {% endfor %}
+                
+                
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

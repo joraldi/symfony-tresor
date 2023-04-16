@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --primary-color: #0f0f0e;
+  --secondary-color: #faf6f5;
+  --light-color: #FFF8D9;
+  --gray-color: #D5DBB3;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+section {
+  padding: 100px 0;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .navbar .logo {
+      font-weight: bold;
+  }
+
+  
+  .navbar ul {
+    display: flex;
+  }
+  
+  .navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    
+  }
+  
+  .navbar a:hover {
+    border-bottom: 2px #fff solid;
+  }
+  
+  .navbar .flex {
+    justify-content: space-between;
+  }
+
+  /* footer */
+  footer {
+    background-color: var(--gray-color);
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* hero */
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/heros.jpg");
+    height: 88.8vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  /* categories */
+  .category-card {
+      height: 430px;
+  }
+  .category-card img {
+    height: 400px;
+  }
+  
+  /* categories */
+  .produit-card {
+    height: 330px;
+  }
+ .produit-card img {
+   height: 300px;
+ }
+
+ .produit-title {
+     padding: 10px;
+     background-color: var(--primary-color);
+     width:100%;
+     margin-top: -7px;
+ }
+ .produit-title a {
+    color : #fff;
+ }
+
+ /* formulaire */
+ .formulaire {
+    text-align:center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .formulaire input, select {
+    height: 35px;
+ }
+ .formulaire input,.formulaire textarea, .formulaire select, .formulaire button {
+     margin-top: 20px;
+    width: 300px;
+ }
+
+
+ /* produit_details*/
+ .produit_details{
+  justify-content: space-between;
+    align-items: flex-start;
+ }
+ .produit_info{
+  width: 45%;
+  line-height: 3;
+}
+.produit_img{
+  width: 45%;
+}
+ 

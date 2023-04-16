@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div class="container flex">
+        <h1 class="logo"><a href="{{ path('app_home')}}">Drip</a></h1>
+        <nav>
+            <ul>
+                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                    <li><a href="{{ path('app_product_index') }}">Vehicules</a></li>
+                    <li><a href="{{ path('app_panier') }}">Panier</a></li>
+                    
+                 {% if app.user %}
+                    <li><a href="{{ path('app_product_new')}}">Ajouter un vehicules</a></li>
+                    <li><a href="{{ path('app_logout') }}">Déconnecter</a></li>
+                    <li>Bienevenue <strong>{{ app.user.firstname }}</strong></li>
+                 {% else %}
+                    <li><a href="{{ path('app_login')}}">Se connecter</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>

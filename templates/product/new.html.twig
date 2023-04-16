@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un produi{% endblock %}
+{% block stylesheets %}
+
+<style>
+.container_product_form {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulaire {
+    align-items: flex-end;
+}
+#product div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 40px;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container_product_form ">
+            <h1 class="md text-center my-3">Ajouter un vehicules</h1>
+            
+            {{ include('product/_form.html.twig') }}
+                
+        </div>
+    </section>
+
+    
+
+{% endblock %}

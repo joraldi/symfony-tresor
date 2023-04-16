@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+{% block stylesheets %}
+<style>
+
+.produit-card {
+    position: relative;
+}
+
+.produit-card > a:first-child {
+        color: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style>
+{%endblock%}
+{% block body %}
+
+    <section>
+        <div class="container">
+            <h1 class="md text-center my-3">Panier</h1>
+            <div class="grid grid-4 text-center my-4">
+            {% for product in products %}
+                    
+                    <div class="produit-card my-3">
+                        <a href="/panier?delete={{product.id}}" title="supprimer"><i class="fa fa-close"></i></a>
+                        <img src="/uploads/product/{{product.image}}" />
+                        <div class="produit-title">
+                            <a class="sm" href="/product/{{product.id}}">{{product.name}}</a>
+                        </div>
+                    </div>
+            {% else %}
+                <h3>Aucun produit trouvé</h3>
+            {% endfor %}
+                
+                
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

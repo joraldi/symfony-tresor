@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+
+    <section>
+        <div class="container">
+            <h1 class="md text-center my-3"></h1>
+            <div class="flex produit_details">
+                <div class="produit_img">
+                    <img src="/uploads/product/{{product.image}}" />
+                </div>
+                <div class="produit_info">
+                    <h3>Titre : {{product.name}}</h3>
+                    <h3>Catégorie : {{product.category}}</h3>
+                    <h3>Description : {{product.description}}</h3>
+                    <h3>Prix : {{product.price}} Euro</h3>
+                    {% if product not in app.user.products %}
+                    <a class="btn sm" href="/product/{{product.id}}?add_to_cart=1">Ajouter au panier</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock %}
